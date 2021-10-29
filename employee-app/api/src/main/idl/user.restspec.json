@@ -1,0 +1,17 @@
+{
+  "name" : "user",
+  "path" : "/user",
+  "doc" : "generated from: com.demo.user.impl.UserResource",
+  "actionsSet" : {
+    "actions" : [ {
+      "name" : "login",
+      "parameters" : [ {
+        "name" : "username",
+        "type" : "string"
+      }, {
+        "name" : "password",
+        "type" : "string"
+      } ]
+    } ]
+  }
+}

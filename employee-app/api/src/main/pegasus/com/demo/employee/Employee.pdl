@@ -1,0 +1,10 @@
+namespace com.demo.employee
+import com.demo.address.Address
+
+record Employee{
+    name : string
+    isIntern : boolean
+    address : Address
+    salary : long
+
+}

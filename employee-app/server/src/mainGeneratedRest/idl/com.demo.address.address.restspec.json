@@ -1,0 +1,22 @@
+{
+  "name" : "address",
+  "namespace" : "com.demo.address",
+  "path" : "/address",
+  "schema" : "com.demo.address.Address",
+  "doc" : "generated from: com.demo.address.impl.AddressResource",
+  "collection" : {
+    "identifier" : {
+      "name" : "addressId",
+      "type" : "long"
+    },
+    "supports" : [ "get", "get_all" ],
+    "methods" : [ {
+      "method" : "get"
+    }, {
+      "method" : "get_all"
+    } ],
+    "entity" : {
+      "path" : "/address/{addressId}"
+    }
+  }
+}

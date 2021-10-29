@@ -1,0 +1,12 @@
+{
+  "type" : "record",
+  "name" : "Address",
+  "namespace" : "com.demo.address",
+  "fields" : [ {
+    "name" : "country",
+    "type" : "string"
+  }, {
+    "name" : "state",
+    "type" : "string"
+  } ]
+}

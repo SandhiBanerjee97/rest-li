@@ -1,0 +1,74 @@
+{
+  "models" : [ {
+    "type" : "record",
+    "name" : "Address",
+    "namespace" : "com.demo.address",
+    "fields" : [ {
+      "name" : "country",
+      "type" : "string"
+    }, {
+      "name" : "state",
+      "type" : "string"
+    } ]
+  }, {
+    "type" : "record",
+    "name" : "Employee",
+    "namespace" : "com.demo.employee",
+    "fields" : [ {
+      "name" : "name",
+      "type" : "string"
+    }, {
+      "name" : "isIntern",
+      "type" : "boolean"
+    }, {
+      "name" : "address",
+      "type" : "com.demo.address.Address"
+    }, {
+      "name" : "salary",
+      "type" : "long"
+    } ]
+  } ],
+  "schema" : {
+    "name" : "employees",
+    "namespace" : "com.demo.employee",
+    "path" : "/employees",
+    "schema" : "com.demo.employee.Employee",
+    "doc" : "generated from: com.demo.employee.impl.EmployeeResource",
+    "collection" : {
+      "identifier" : {
+        "name" : "employeesId",
+        "type" : "long"
+      },
+      "supports" : [ "create", "delete", "get", "get_all" ],
+      "methods" : [ {
+        "method" : "create"
+      }, {
+        "method" : "get"
+      }, {
+        "method" : "delete"
+      }, {
+        "method" : "get_all"
+      } ],
+      "finders" : [ {
+        "name" : "findEmployee",
+        "parameters" : [ {
+          "name" : "employeeId",
+          "type" : "long"
+        } ]
+      } ],
+      "actions" : [ {
+        "name" : "login",
+        "parameters" : [ {
+          "name" : "username",
+          "type" : "string"
+        }, {
+          "name" : "password",
+          "type" : "string"
+        } ]
+      } ],
+      "entity" : {
+        "path" : "/employees/{employeesId}"
+      }
+    }
+  }
+}

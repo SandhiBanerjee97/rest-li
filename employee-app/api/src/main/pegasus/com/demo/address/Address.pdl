@@ -1,0 +1,6 @@
+namespace com.demo.address
+
+record Address{
+    country : string
+    state : string
+}

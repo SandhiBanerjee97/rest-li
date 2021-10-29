@@ -1,0 +1,39 @@
+apply plugin: 'pegasus'
+
+ext.apiProject = project(':api')
+
+dependencies {
+  compile project(path: ':api', configuration: 'dataTemplate')
+  compile spec.product.pegasus.restliServer
+  compile spec.product.pegasus.restliNettyStandalone
+}
+                                      /*RUNNING ON NETTY WITHOUT*/
+task startNettyServer(type: JavaExec) {
+  main = 'com.linkedin.restli.server.NettyStandaloneLauncher'
+  args = ['-port', '8080', '-packages', 'com.demo']
+  classpath = sourceSets.main.runtimeClasspath
+  standardInput = System.in
+}
+                                      /*RUNNING ON JETTY WITH ERROR*/
+/*If We can configure the application on Jetty without Error We will be able to map --> "Login Servlet and
+Servlet filter's in web.xml" before our rest.li api
+
+Current issue -> Jetty Running with Exception
+              -> request not getting redirected to resource after Authentication
+*/
+
+apply plugin: 'war'
+
+configurations {
+  jetty8
+}
+
+dependencies {
+  jetty8 "org.mortbay.jetty:jetty-runner:8.1.15.v20140411"
+}
+
+task startJettyServer(type: JavaExec) {
+  main = "org.mortbay.jetty.runner.Runner"
+  args = [war.archivePath]
+  classpath configurations.jetty8
+}

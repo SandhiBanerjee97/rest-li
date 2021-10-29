@@ -1,0 +1,11 @@
+
+idl compatibility report:
+Incompatible changes:
+  1) Resource for "/home/xs150-sandhi/IdeaProjects/demo-app/employee-app/api/src/main/snapshot/user.snapshot.json" is not found. This endpoint will not be released. Please remove this file and build again
+  2) Resource for "/home/xs150-sandhi/IdeaProjects/demo-app/employee-app/api/src/main/idl/user.restspec.json" is not found. This endpoint will not be released. Please remove this file and build again
+
+[RS-COMPAT]: true
+[MD-COMPAT]: true
+[RS-I]:Resource for "/home/xs150-sandhi/IdeaProjects/demo-app/employee-app/api/src/main/snapshot/user.snapshot.json" is not found. This endpoint will not be released. Please remove this file and build again
+[RS-I]:Resource for "/home/xs150-sandhi/IdeaProjects/demo-app/employee-app/api/src/main/idl/user.restspec.json" is not found. This endpoint will not be released. Please remove this file and build again
+
