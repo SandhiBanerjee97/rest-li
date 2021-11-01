@@ -24,7 +24,7 @@ task startJettyServer(type: JavaExec) {
   args = [war.archivePath]
   classpath configurations.jetty8
 }
-                                      /*RUNNING ON NETTY WITHOUT*/
+                                      /*RUNNING ON NETTY*/
 /* App is working but is throwing some kind of run-time exception ,
    suspected cause --> Issue in "web.xml" file/deployment Descriptor,
    will try to resolve the issue
