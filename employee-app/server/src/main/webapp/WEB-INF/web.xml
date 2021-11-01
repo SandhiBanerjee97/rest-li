@@ -13,9 +13,19 @@
     <async-supported>true</async-supported>
     <init-param>
       <param-name>resourcePackages</param-name>
-      <param-value>com.demo.address.impl;com.demo.employee.impl</param-value>
+      <param-value>com.demo.employee.impl;com.demo.address.impl</param-value>
+    </init-param>
+    <init-param>
+      <param-name>parseqThreadPoolSize</param-name>
+      <param-value>10</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.demo.LoginServlet</servlet-class>
+    <async-supported>true</async-supported>
   </servlet>
 
   <!-- servlet mappings -->
@@ -24,16 +34,17 @@
     <url-pattern>/api/*</url-pattern>
   </servlet-mapping>
 
-  <!--   filter -->
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
   <filter>
-    <filter-name>authenticationFilter</filter-name>
-    <filter-class>MyFilter</filter-class>
+    <filter-name>AuthFilter</filter-name>
+    <filter-class>com.demo.AuthFilter</filter-class>
     <async-supported>true</async-supported>
   </filter>
-  <!--   filter mappings-->
   <filter-mapping>
-    <filter-name>authenticationFilter</filter-name>
+    <filter-name>AuthFilter</filter-name>
     <url-pattern>/api/*</url-pattern>
   </filter-mapping>
-
 </web-app>
