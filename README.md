@@ -35,15 +35,17 @@ DELETE ->/employees/{id}
 
 **Build info**
 
-STEP 1 : Navigate to --> /restli-demo-app/employee-app/build.gradle
+STEP 1 : clone project in a folder and open in IDE
+
+STEP 2 : Navigate to --> /restli-demo-app/employee-app/build.gradle
 
 run command : "gradle build" on terminal
 
-STEP 2 : Navigate to --> /restli-demo-app/employee-app/server/build.gradle
+STEP 3 : Navigate to --> /restli-demo-app/employee-app/server/build.gradle
 
 run command : "gradle build" on terminal
 
-STEP 3 : open --> /restli-demo-app/employee-app/server/build.gradle
+STEP 4 : open --> /restli-demo-app/employee-app/server/build.gradle
 
 run gradle task : startNettyServer - To start application on Netty(No login implemented)
 
