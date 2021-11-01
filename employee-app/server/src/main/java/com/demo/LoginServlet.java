@@ -25,7 +25,7 @@ public class LoginServlet extends HttpServlet {
             }
         }
         else {
-            out.print("Sorry username or password error");
+            out.print("<center><b>Wrong Credentials Try Again ...!</b></center>");
             RequestDispatcher rd=request.getRequestDispatcher("index.html");
             rd.include(request,response);
         }

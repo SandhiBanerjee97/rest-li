@@ -3,17 +3,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous">
     <title>Login First</title>
 </head>
 <body>
-
-<div class="form-group container">
-    <form action="login" method="post">
-        Enter Name:<input type="text" name="name"/><br/>
-        Enter Password:<input type="password" name="password"/><br/>
-        <input type="submit" value="login">
+<div class="container">
+    <form class="form-signin" method="post" action="login">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <p>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Username" required="" autofocus="">
+        </p>
+        <p>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+        </p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     </form>
 </div>
 </body>
 </html>
+
+
