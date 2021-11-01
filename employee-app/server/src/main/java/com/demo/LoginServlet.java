@@ -15,7 +15,7 @@ public class LoginServlet extends HttpServlet {
         String userPass = request.getParameter("password");
         PrintWriter out=response.getWriter();
         response.setContentType("text/html");
-        if (userName.equals("sandhi") && userPass.equals("admin")){
+        if (userName.equals("mukeshSir") && userPass.equals("admin")){
             try {
                 HttpSession session = request.getSession();
                 session.setAttribute("username",userName);
