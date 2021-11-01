@@ -56,4 +56,21 @@ PUT -> /employees
 
 DELETE ->/employees/{id} 
 
+**Important files to check**
+
+RELATED TO AUTHENTICATION
+
+employee-app/server/src/main/java/com/demo/AuthFilter.java
+
+employee-app/server/src/main/java/com/demo/LoginServlet.java
+
+employee-app/server/src/main/webapp/WEB-INF/web.xml
+
+employee-app/server/src/main/webapp/index.html
+
+RELATED TO API
+
+/employee-app/api/src/main/pegasus/com/demo/employee/Employee.pdl
+
+/employee-app/server/src/main/java/com/demo/employee/impl/EmployeeResource.java
 

@@ -25,6 +25,10 @@ task startJettyServer(type: JavaExec) {
   classpath configurations.jetty8
 }
                                       /*RUNNING ON NETTY WITHOUT*/
+/* App is working but is throwing some kind of run-time exception ,
+   suspected cause --> Issue in "web.xml" file/deployment Descriptor,
+   will try to resolve the issue
+*/
 task startNettyServer(type: JavaExec) {
   main = 'com.linkedin.restli.server.NettyStandaloneLauncher'
   args = ['-port', '8080', '-packages', 'com.demo']

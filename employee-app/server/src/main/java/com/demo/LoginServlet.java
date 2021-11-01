@@ -15,6 +15,11 @@ public class LoginServlet extends HttpServlet {
         String userPass = request.getParameter("password");
         PrintWriter out=response.getWriter();
         response.setContentType("text/html");
+
+        /*We can use DB here ,proper session management and password encoding
+        * and all the necessary operations and follow all the best practices for
+        * servlets */
+
         if (userName.equals("mukeshSir") && userPass.equals("admin")){
             try {
                 HttpSession session = request.getSession();

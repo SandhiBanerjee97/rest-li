@@ -10,6 +10,8 @@ public class AuthFilter implements Filter {
     public void init(FilterConfig filterConfig) throws ServletException {
         System.out.println("Filter Working");
     }
+    /*We can use OAuth and other security related technologies here */
+
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         if (((HttpServletRequest)request).getSession().getAttribute("username")==null){
